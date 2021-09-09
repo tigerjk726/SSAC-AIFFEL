@@ -1,0 +1,20 @@
+import math
+import numpy as np
+
+
+mu = 0
+sigma = 1
+def normal_dist(x, mu, sigma):
+    return np.exp(-(x-mu)**2 / 2 / sigma**2) / (np.sqrt(2 * math.pi) * sigma)
+
+
+import matplotlib.pyplot as plt
+
+x = np.linspace(-10, 10, 1000)
+y = normal_dist(x, MU, SIGMA)
+
+plt.plot(x, y)
+plt.xlabel('x')
+plt.ylabel('y')
+plt.legend()
+plt.show()
